@@ -1,0 +1,174 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+/* styling entire document*/
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+} 
+
+/* Removing add on 00webhost*/
+img[src="https://cdn.000webhost.com/000webhost/logo/footer-powered-by-000webhost-white2.png"] {
+    display: none;
+}
+.disclaimer{
+display: none;
+}
+/* Removing add on 00webhost*/
+
+body {
+    color: #999;
+    background-color: #f2f2f2;
+    overflow-y: scroll; /* Show vertical scrollbar */
+}
+
+/* styling scroll bar */
+::-webkit-scrollbar {
+    width: 17px; /* width */
+}
+::-webkit-scrollbar-track {
+    background: #0E1111; /* Track */
+}
+::-webkit-scrollbar-thumb {
+    background: #ADC4D6; /* Handle */
+}
+::selection{
+    background: rgb(0,123,255,0.3);
+}
+/* styling scroll bar End*/
+
+.form-control {
+    box-shadow: none;
+    border-color: #0E1111;
+}
+.form-control:focus {
+    border-color: #ADC4D6;
+}
+.signupForm {
+    width: 500px;
+    margin: 0 auto;
+    padding: 30px 0;
+}
+.form-group .icon {
+    padding: 10px;
+    text-align: center;
+    background:#ADC4D6;
+    color: #0E1111;
+  }
+
+.signupForm form {
+    color: #0E1111;
+    border-radius: 1px;
+    margin-bottom: 15px;
+    background: #fff;
+    border: 1px solid #ADC4D6;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+    padding: 30px;
+    border-top: 2px solid #ADC4D6;
+    border-left: 2px solid #ADC4D6;
+    border-right: 2px solid #ADC4D6;
+    border-bottom: 1px solid #0E1111;
+}
+.signupForm .formTitle {
+    text-align: center;
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+.signupForm .form-group {
+    margin-bottom: 20px;
+}
+.signupForm .form-control, .signupForm .submitButton {
+    min-height: 40px;
+    border-radius: 2px; 
+    transition: all 0.5s;
+}
+
+.signupForm .submitButton {
+    border: none;
+    line-height: normal;
+    background: #dde7ee;
+    color: #0E1111;
+}
+.signupForm .submitButton:hover, .signupForm .submitButton:focus {
+    background:#ADC4D6;
+    color: #0E1111;
+}
+.signupForm .checkbox-inline {
+    float: left;
+}
+.signupForm input[type="checkbox"] {
+    margin-top: 2px;
+}
+.signupForm .forgot-link {
+    float: right;
+}
+.signupForm .small {
+    font-size: 13px;
+}
+.signupForm a {
+    color:#0E1111;
+}
+.signupForm a:hover {
+    color:#ADC4D6;
+} 
+#error{
+    background-color: #F7D9D9;
+    color: #0E1111;
+    font-size: 15px;
+    padding: 14px 25px;
+    text-align: center;
+    text-decoration: none;
+    border: 2px solid #ADC4D6;
+    margin: 4px 2px;
+} 
+  @media all and (max-width: 900px){
+    .signupForm {
+        width:  100%;
+        margin: 0 auto;
+        padding: 30px 0;
+    }
+    .REPSIGNUP, .SOLISIGNUP {
+        width: 100%;
+     }
+  }
+
+  /* Extra styles for the cancel button */
+.SOLISIGNUP{
+    padding: 14px 20px;
+    color: #0E1111;
+    background-color: #ddd;
+    width: 100%;
+    text-align: center;
+    margin: 8px 0;
+    border: 1px solid #0E1111;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+    cursor: auto;
+  
+  }
+  .REPSIGNUP{ 
+    border: 1px solid #0E1111;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+    color: #0E1111;
+    transition: all 0.5s;
+margin: 8px 0;
+text-align: center;
+cursor: pointer;
+width: 100%;
+  padding: 14px 20px;
+  opacity:1;
+
+}
+.REPSIGNUP:hover{
+    color: black;
+     background-color: #ADC4D6;
+   }
+   .REPSIGNUP a:hover{
+    color: black;
+    text-decoration: none;
+   }
+   /* Float cancel and signup buttons and add an equal width */
+.REPSIGNUP, .SOLISIGNUP {
+    float: left;
+    width: 50%;
+  }

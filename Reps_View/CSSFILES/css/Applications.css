@@ -1,0 +1,252 @@
+@import url(https://fonts.googleapis.com/css?family=Oswald:400|Raleway:400,700,400italic,700italic);
+
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+} 
+/* Removing add on 00webhost*/
+img[src="https://cdn.000webhost.com/000webhost/logo/footer-powered-by-000webhost-white2.png"] {
+    display: none;
+}
+.disclaimer{
+display: none;
+}
+/* Removing add on 00webhost*/
+
+body {
+  background-color: #f2f2f2;
+  color: #0E1111;
+  font: 16px/1.25 'Raleway', sans-serif;
+  padding: 8px;
+  overflow-y: scroll; /* Show vertical scrollbar */
+}
+/* styling scroll bar */
+::-webkit-scrollbar {
+    width: 17px; /* width */
+}
+::-webkit-scrollbar-track {
+    background: #0E1111; /* Track */
+}
+::-webkit-scrollbar-thumb {
+    background: #ADC4D6; /* Handle */
+}
+::selection{
+    background: rgb(0,123,255,0.3);
+}
+/* styling scroll bar End*/
+
+main,
+footer {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
+
+/* Headings */
+h1{
+  font-family: 'Oswald', sans-serif;
+  font-weight: 400;
+  margin: 4px 0;
+  text-align: center;
+  font-size: 40px;
+}
+
+/* Links */
+a {
+  color: #0E1111;
+  text-decoration: none;
+  font-size: 20px;
+  padding: 10px;
+}
+
+a:hover {
+  color: #ADC4D6;
+  transition: all 0.5s;
+}
+
+
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  max-width: 100%;
+  width: 100%;
+  border: 2px solid #0E1111;
+  background-color: #fff;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+  border-radius: 1px;
+}
+
+
+
+/*** HEADER ***/
+table thead {
+  border: 2px solid #0E1111;  
+}
+
+table th,
+table td {
+  padding: 16px 8px;
+  position: relative;
+}
+
+table th {
+  font: 400 22px/1 'Oswald', sans-serif;
+  letter-spacing: 0.4px;
+  outline: none;
+  padding-right: 32px;
+  text-align: left;
+  text-transform: uppercase;
+  transition: color 0.2s ease-in-out;
+  color: #0E1111;
+  
+}
+
+table th:hover,
+table th:focus {
+  color: #ADC4D6;
+  cursor: pointer;
+}
+
+/* Arrows */
+table th:after,
+table th:before {
+  border: 5.6px solid transparent;
+  content: '';
+  height: 0; 
+  position: absolute;
+  right: 10.4px;
+  top: 50%;
+  transform: translateY(-50%);
+  transition:  0.2s ease-in-out;
+  width: 0; 
+}
+
+table th:after {
+  border-bottom: 0;
+  border-top-color: #0E1111;
+  margin-top: 5.6px;
+}
+
+
+/*** BODY ***/
+table tbody > tr {
+  border-bottom: 2px solid rgba(255, 255, 255, 0.5);
+  transition:  0.2s ease-in-out;
+}
+
+table tbody > tr:hover {
+  background-color: #ADC4D6;
+  border-color: #0E1111;
+  color:#0E1111;
+}
+
+table tbody > tr {
+  border-color: #0E1111;
+}
+
+/* Name Cell */
+table td[data-label="Name"] {
+  font-size: 18px;
+}
+
+/* Animal Cells */
+table td[data-label="ProfilePic"],
+table td[data-label="EmailAdd"],
+table td[data-label="Date"] {
+  text-align: center;
+  font-size: 16px;
+}
+
+/* Check and Cross Marks */
+table tr span.yes,
+table tr span.no {
+  transition: all 0.2s ease-in-out;
+}
+
+table tr:hover span.yes{
+    color:#a2ed56;
+}
+table tr:hover span.no {
+  color: #fd6470;
+}
+
+table span.yes {
+  color: #a2ed56;
+  font-size: 26px;
+}
+
+table span.no {
+  color: #fd6470;
+  font-size: 26px;
+}
+
+/*** FOOTER ***/
+footer {
+  text-align: center;
+}
+
+footer a {
+  display: inline-block;
+}
+
+td img{
+    /* width:80%; */
+    display: block;
+    height:150px; 
+    width:150px;
+    vertical-align: bottom;
+}
+
+@media (max-width: 960px) {
+
+  /*** TABLE ***/
+  table tr,
+  table td {
+    display: block;
+  }
+
+  table tr {
+    padding: 12px 0;
+  }
+
+  /* Header */
+  table thead tr {
+    text-align: center;
+  }
+
+  table th {
+    display: block;
+    padding: 4px 8px;
+  }
+
+  /* Body */
+  table td {
+    padding: 4px 8px 4px 104px;
+  }
+
+  table td:before {
+    content: attr(data-label);
+    font: 400 18px/1 'Oswald', sans-serif;
+    left: 8px;
+    position: absolute;
+    top: 2px;
+    width: 100%;
+  }
+
+  /* Animal Cells */
+  table td[data-label="ProfilePic"],
+  table td[data-label="EmailAdd"],
+  table td[data-label="Date"] {
+    text-align: left;
+  }
+
+  /* Check and Cross Marks */
+  table span.yes {
+    line-height: 0.875;
+  }
+}
